@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 // Define the Provider
 const AuthProvider = (props) => {
-    const [isLoggedIn, setIsLoggedIn] = useStatea(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     return (
         <AuthContext.Provider value={isLoggedIn}>
@@ -17,4 +17,4 @@ const AuthProvider = (props) => {
 // Define consumer
 const AuthConsumer = AuthContext.Consumer;
 
-export { AuthConsumer, AuthProvider, AuthConsumer }
+export { AuthContext, AuthProvider, AuthConsumer }
